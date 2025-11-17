@@ -20,11 +20,12 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.server.ServerWebExchange;
 
 @Configuration
-public class RouterConfig {
+public class GatewayConfig {
 
     @Bean
     public RouteLocator customRouteLocator(RouteLocatorBuilder builder) {
         return builder.routes()
+                //trillion-book.shop/api 로 들어로는 모든 경로에
                 .route("tillion_book_route", r -> r.host("trillion-book.shop")
                         .and()
                         .path("/api/**")
