@@ -16,9 +16,7 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: \
-        http://be12-team1:nhnacademy123!@127.0.0.1:10419/eureka/,\
-        http://be12-team1:nhnacademy123!@127.0.0.1:10420/eureka/
+      defaultZone: http://be12-team1:nhnacademy123!@127.0.0.1:10419/eureka/,http://be12-team1:nhnacademy123!@127.0.0.1:10420/eureka/
   instance:
     prefer-ip-address: true
     instance-id: ${spring.application.name}:${server.port}
